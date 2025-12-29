@@ -73,7 +73,7 @@ onMounted(() => {
   <div class="h-full flex flex-col items-center justify-center px-4 py-2 overflow-hidden">
     <!-- Title -->
     <div
-      class="text-center mb-3 transition-all duration-700"
+      class="text-center mb-3 transition duration-700"
       :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'"
     >
       <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#161b22] border border-[#30363d] mb-2">
@@ -86,7 +86,7 @@ onMounted(() => {
     <div v-if="insights" class="w-full max-w-4xl">
       <!-- Word Cloud -->
       <div
-        class="glass rounded-xl p-4 mb-3 transition-all duration-700"
+        class="glass rounded-xl p-4 mb-3 transition duration-700"
         :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'"
         :style="{ transitionDelay: '200ms' }"
       >
@@ -99,7 +99,7 @@ onMounted(() => {
           <span
             v-for="(word, index) in topWords"
             :key="word.word"
-            class="font-semibold transition-all duration-500 hover:scale-110 cursor-default"
+            class="font-semibold transition duration-300 ease-out hover:scale-110 cursor-default"
             :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
             :style="getWordStyle(index, word.count)"
             :title="`${word.word}: ${word.count} times`"
@@ -112,7 +112,7 @@ onMounted(() => {
       <div class="grid grid-cols-2 gap-3 mb-3">
         <!-- Commit Types -->
         <div
-          class="glass rounded-xl p-4 transition-all duration-700"
+          class="glass rounded-xl p-4 transition duration-700"
           :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'"
           :style="{ transitionDelay: '400ms' }"
         >
@@ -125,7 +125,7 @@ onMounted(() => {
             <div
               v-for="(type, index) in topTypes"
               :key="type.type"
-              class="transition-all duration-500"
+              class="transition duration-500"
               :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'"
               :style="{ transitionDelay: `${500 + index * 80}ms` }"
             >
@@ -149,7 +149,7 @@ onMounted(() => {
 
         <!-- Stats -->
         <div
-          class="glass rounded-xl p-4 transition-all duration-700"
+          class="glass rounded-xl p-4 transition duration-700"
           :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'"
           :style="{ transitionDelay: '400ms' }"
         >
@@ -174,7 +174,7 @@ onMounted(() => {
 
       <!-- Top Words List -->
       <div
-        class="glass rounded-xl p-3 transition-all duration-700"
+        class="glass rounded-xl p-3 transition duration-700"
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
         :style="{ transitionDelay: '600ms' }"
       >
@@ -182,7 +182,7 @@ onMounted(() => {
           <span
             v-for="(word, index) in topWords.slice(0, 10)"
             :key="word.word"
-            class="px-3 py-1 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105"
+            class="px-3 py-1 rounded-full text-xs font-medium transition duration-300 hover:scale-105"
             :class="isVisible ? 'opacity-100' : 'opacity-0'"
             :style="{
               backgroundColor: `hsl(${120 + index * 12}, 40%, 20%)`,

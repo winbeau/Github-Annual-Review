@@ -74,7 +74,7 @@ async function handleSubmit() {
               v-model="token"
               type="password"
               placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
-              class="w-full bg-[#0d1117] border border-[#30363d] rounded-lg pl-12 pr-4 py-3 text-white placeholder-[#484f58] focus:outline-none focus:border-[#238636] focus:ring-1 focus:ring-[#238636] transition-all"
+              class="w-full bg-[#0d1117] border border-[#30363d] rounded-lg pl-12 pr-4 py-3 text-white placeholder-[#484f58] focus:outline-none focus:border-[#238636] focus:ring-1 focus:ring-[#238636] transition"
               :disabled="isSubmitting"
             />
           </div>
@@ -89,7 +89,7 @@ async function handleSubmit() {
           <button
             type="submit"
             :disabled="!token.trim() || isSubmitting"
-            class="w-full bg-[#238636] hover:bg-[#2ea043] disabled:bg-[#238636]/50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-all btn-glow"
+            class="w-full bg-[#238636] hover:bg-[#2ea043] disabled:bg-[#238636]/50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition btn-glow"
           >
             <Loader2 v-if="isSubmitting" class="w-5 h-5 animate-spin" />
             <template v-else>

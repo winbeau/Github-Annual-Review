@@ -1,5 +1,9 @@
 # 🎉 GitHub Annual Review
 
+<p align="center">
+  <img src="./public/github.png" alt="GitHub Annual Review icon" width="140" height="140" />
+</p>
+
 > **Discover your coding journey in 2025** - A beautiful, interactive annual report for your GitHub contributions.
 
 ![GitHub](https://img.shields.io/badge/GitHub-Annual_Review-238636?style=for-the-badge&logo=github)

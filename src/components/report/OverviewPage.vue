@@ -62,7 +62,7 @@ onMounted(() => {
   <div class="h-full flex flex-col items-center justify-center px-4 py-6">
     <!-- User Header -->
     <div
-      class="text-center mb-4 transition-all duration-700"
+      class="text-center mb-4 transition duration-700"
       :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'"
     >
       <div class="relative inline-block">
@@ -79,7 +79,7 @@ onMounted(() => {
 
     <!-- Year Title -->
     <div
-      class="text-center mb-6 transition-all duration-700 delay-150"
+      class="text-center mb-6 transition duration-700 delay-150"
       :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'"
     >
       <h1 class="text-6xl md:text-8xl font-black">
@@ -93,7 +93,7 @@ onMounted(() => {
       <div
         v-for="(stat, index) in stats"
         :key="stat.label"
-        class="glass rounded-xl p-3 text-center transition-all duration-500 hover:scale-105"
+        class="glass rounded-xl p-3 text-center transition duration-500 hover:scale-[1.03]"
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
         :style="{ transitionDelay: `${300 + index * 100}ms` }"
       >
@@ -117,7 +117,7 @@ onMounted(() => {
         :href="data.mostActiveRepo.html_url"
         target="_blank"
         rel="noopener noreferrer"
-        class="glass rounded-xl p-4 transition-all duration-500 block hover:bg-[#30363d]/50 hover:scale-[1.02] cursor-pointer group"
+        class="glass rounded-xl p-4 transition duration-500 block hover:scale-[1.03] cursor-pointer group"
         :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'"
         :style="{ transitionDelay: '700ms' }"
       >
@@ -126,7 +126,7 @@ onMounted(() => {
           <span class="text-xs text-[#8b949e]">Most Active Repo</span>
           <ExternalLink class="w-3 h-3 text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
         </div>
-        <p class="text-lg font-bold text-[#58a6ff] truncate group-hover:text-[#79c0ff] transition-colors">{{ data.mostActiveRepo.name }}</p>
+        <p class="text-lg font-bold text-[#58a6ff] truncate">{{ data.mostActiveRepo.name }}</p>
         <div class="flex items-center gap-2 mt-1 text-xs text-[#8b949e]">
           <span v-if="data.mostActiveRepo.language" class="flex items-center gap-1">
             <span class="w-2 h-2 rounded-full bg-[#238636]"></span>
@@ -142,7 +142,7 @@ onMounted(() => {
       <!-- Busiest Day -->
       <div
         v-if="formattedBusiestDay"
-        class="glass rounded-xl p-4 transition-all duration-500"
+        class="glass rounded-xl p-4 transition duration-500"
         :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'"
         :style="{ transitionDelay: '800ms' }"
       >
@@ -157,7 +157,7 @@ onMounted(() => {
 
     <!-- Total Contributions -->
     <div
-      class="glass rounded-2xl px-8 py-4 text-center transition-all duration-700"
+      class="glass rounded-2xl px-8 py-4 text-center transition duration-700"
       :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'"
       :style="{ transitionDelay: '900ms' }"
     >

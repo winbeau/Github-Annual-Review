@@ -41,7 +41,7 @@ onMounted(() => {
   <div class="h-full flex flex-col items-center justify-center px-4 py-6">
     <!-- Title -->
     <div
-      class="text-center mb-6 transition-all duration-700"
+      class="text-center mb-6 transition duration-700"
       :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'"
     >
       <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#161b22] border border-[#30363d] mb-3">
@@ -54,7 +54,7 @@ onMounted(() => {
     <div class="flex flex-col lg:flex-row items-center gap-8 w-full max-w-4xl">
       <!-- Donut Chart -->
       <div
-        class="relative w-48 h-48 flex-shrink-0 transition-all duration-700"
+        class="relative w-48 h-48 flex-shrink-0 transition duration-700"
         :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'"
         :style="{ transitionDelay: '200ms' }"
       >
@@ -89,7 +89,7 @@ onMounted(() => {
         <div
           v-for="(lang, index) in topLanguages"
           :key="lang.name"
-          class="glass rounded-lg p-3 transition-all duration-500 hover:scale-[1.02]"
+          class="glass rounded-lg p-3 transition duration-500 hover:scale-[1.02] hover-card"
           :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'"
           :style="{ transitionDelay: `${400 + index * 80}ms` }"
         >
@@ -120,7 +120,7 @@ onMounted(() => {
     <!-- Top Language Highlight -->
     <div
       v-if="topLanguages[0]"
-      class="mt-6 glass rounded-2xl px-6 py-4 text-center transition-all duration-700"
+      class="mt-6 glass rounded-2xl px-6 py-4 text-center transition duration-700"
       :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'"
       :style="{ transitionDelay: '900ms' }"
     >

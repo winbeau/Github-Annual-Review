@@ -54,7 +54,7 @@ const medalColors = ['#e3b341', '#8b949e', '#cd7f32']
   <div class="h-full flex flex-col items-center justify-center px-4 py-4">
     <!-- Title -->
     <div
-      class="text-center mb-4 transition-all duration-700"
+      class="text-center mb-4 transition duration-700"
       :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'"
     >
       <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#161b22] border border-[#30363d] mb-2">
@@ -67,7 +67,7 @@ const medalColors = ['#e3b341', '#8b949e', '#cd7f32']
     <!-- Stats Row -->
     <div class="grid grid-cols-3 gap-3 w-full max-w-lg mb-5">
       <div
-        class="glass rounded-xl p-3 text-center transition-all duration-500"
+        class="glass rounded-xl p-3 text-center transition duration-500"
         :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'"
         :style="{ transitionDelay: '200ms' }"
       >
@@ -77,7 +77,7 @@ const medalColors = ['#e3b341', '#8b949e', '#cd7f32']
       </div>
 
       <div
-        class="glass rounded-xl p-3 text-center transition-all duration-500"
+        class="glass rounded-xl p-3 text-center transition duration-500"
         :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'"
         :style="{ transitionDelay: '300ms' }"
       >
@@ -87,7 +87,7 @@ const medalColors = ['#e3b341', '#8b949e', '#cd7f32']
       </div>
 
       <div
-        class="glass rounded-xl p-3 text-center transition-all duration-500"
+        class="glass rounded-xl p-3 text-center transition duration-500"
         :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'"
         :style="{ transitionDelay: '400ms' }"
       >
@@ -99,7 +99,7 @@ const medalColors = ['#e3b341', '#8b949e', '#cd7f32']
 
     <!-- Top Repositories -->
     <div
-      class="glass rounded-xl p-4 w-full max-w-lg mb-5 transition-all duration-700"
+      class="glass rounded-xl p-4 w-full max-w-lg mb-5 transition duration-700"
       :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
       :style="{ transitionDelay: '500ms' }"
     >
@@ -115,7 +115,7 @@ const medalColors = ['#e3b341', '#8b949e', '#cd7f32']
           :href="repo.html_url"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-3 p-2 rounded-lg hover:bg-[#30363d]/50 transition-all duration-300 group cursor-pointer"
+          class="flex items-center gap-3 p-2 rounded-lg bg-transparent hover:bg-transparent transition duration-300 group cursor-pointer hover:scale-[1.03]"
           :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'"
           :style="{ transitionDelay: `${600 + index * 100}ms` }"
         >
@@ -127,7 +127,7 @@ const medalColors = ['#e3b341', '#8b949e', '#cd7f32']
           </div>
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-1">
-              <p class="text-sm font-medium text-[#58a6ff] truncate group-hover:text-[#79c0ff] transition-colors">{{ repo.name }}</p>
+              <p class="text-sm font-medium text-[#58a6ff] truncate">{{ repo.name }}</p>
               <ExternalLink class="w-3 h-3 text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
             </div>
             <div class="flex items-center gap-3 text-xs text-[#8b949e]">
@@ -147,7 +147,7 @@ const medalColors = ['#e3b341', '#8b949e', '#cd7f32']
 
     <!-- Thank You -->
     <div
-      class="glass rounded-2xl px-6 py-4 text-center transition-all duration-700"
+      class="glass rounded-2xl px-6 py-4 text-center transition duration-700"
       :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'"
       :style="{ transitionDelay: '900ms' }"
     >

@@ -24,8 +24,11 @@ export const useGitHubStore = defineStore('github', () => {
   // Computed
   const isAuthenticated = computed(() => !!token.value && !!user.value)
   const hasReviewData = computed(() => !!annualReview.value)
-  const displayYear = computed(() => user.value ? reviewYear.value.toString() : '-/-')
-  const pageTitle = computed(() => user.value ? `${user.value.login} - ${reviewYear.value}` : 'GitHub Annual Review')
+  const displayYear = computed(() => (annualReview.value?.year ?? reviewYear.value).toString())
+  const pageTitle = computed(() => {
+    const login = user.value?.login ?? annualReview.value?.user.login
+    return login ? `${login} - ${reviewYear.value}` : 'GitHub Annual Review'
+  })
 
   // Actions
   function setToken(newToken: string) {
@@ -109,6 +112,8 @@ export const useGitHubStore = defineStore('github', () => {
 
       setLoading(true, 'Processing statistics...', 90)
       annualReview.value = reviewData
+      user.value = reviewData.user
+      reviewYear.value = reviewData.year
 
       setLoading(true, 'Complete!', 100)
 

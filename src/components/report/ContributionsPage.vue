@@ -84,7 +84,7 @@ onMounted(() => {
   <div class="h-full flex flex-col items-center justify-center px-4 py-2 overflow-hidden">
     <!-- Title -->
     <div
-      class="text-center mb-3 transition-all duration-700"
+      class="text-center mb-3 transition duration-700"
       :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'"
     >
       <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#161b22] border border-[#30363d] mb-2">
@@ -95,7 +95,7 @@ onMounted(() => {
 
     <!-- Full Year Contribution Graph -->
     <div
-      class="glass rounded-xl p-3 w-full max-w-4xl mb-3 transition-all duration-700"
+      class="glass rounded-xl p-3 w-full max-w-4xl mb-3 transition duration-700"
       :class="isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'"
       :style="{ transitionDelay: '200ms' }"
     >
@@ -106,7 +106,7 @@ onMounted(() => {
               <div
                 v-for="(day, dayIndex) in week.contributionDays"
                 :key="dayIndex"
-                class="w-[10px] h-[10px] rounded-sm transition-all duration-500 hover:scale-150 hover:z-10 cursor-pointer"
+                class="w-[10px] h-[10px] rounded-sm transition duration-200 ease-out hover:scale-[1.35] hover:z-10 cursor-pointer"
                 :class="`contrib-${contributionLevelMap[day.contributionLevel]}`"
                 :style="{
                   transitionDelay: `${Math.min(weekIndex * 10, 500)}ms`,
@@ -135,7 +135,7 @@ onMounted(() => {
 
     <!-- Monthly Activity Chart - Enhanced -->
     <div
-      class="glass rounded-xl p-4 w-full max-w-3xl mb-3 transition-all duration-700"
+      class="glass rounded-xl p-4 w-full max-w-3xl mb-3 transition duration-700"
       :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
       :style="{ transitionDelay: '400ms' }"
     >
@@ -201,7 +201,7 @@ onMounted(() => {
     <!-- Stats Row -->
     <div class="grid grid-cols-2 gap-3 w-full max-w-md">
       <div
-        class="glass rounded-xl p-3 text-center transition-all duration-500 group hover:scale-105"
+        class="glass rounded-xl p-3 text-center transition duration-500 group hover:scale-105 hover-card"
         :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'"
         :style="{ transitionDelay: '600ms' }"
       >
@@ -214,7 +214,7 @@ onMounted(() => {
       </div>
 
       <div
-        class="glass rounded-xl p-3 text-center transition-all duration-500 group hover:scale-105"
+        class="glass rounded-xl p-3 text-center transition duration-500 group hover:scale-105 hover-card"
         :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'"
         :style="{ transitionDelay: '700ms' }"
       >
